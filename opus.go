@@ -92,17 +92,17 @@ var (
 // Opus config mapping table
 var ConfigTable = [32]*Config{
 	// Silk
-	{SILK, 10000, NB}, {SILK, 20000, NB}, {SILK, 40000, NB}, {SILK, 60000, NB},
-	{SILK, 10000, MB}, {SILK, 20000, MB}, {SILK, 40000, MB}, {SILK, 60000, MB},
-	{SILK, 10000, WB}, {SILK, 20000, WB}, {SILK, 40000, WB}, {SILK, 60000, WB},
+	{SILK, 10000 * time.Microsecond, NB}, {SILK, 20000 * time.Microsecond, NB}, {SILK, 40000 * time.Microsecond, NB}, {SILK, 60000 * time.Microsecond, NB},
+	{SILK, 10000 * time.Microsecond, MB}, {SILK, 20000 * time.Microsecond, MB}, {SILK, 40000 * time.Microsecond, MB}, {SILK, 60000 * time.Microsecond, MB},
+	{SILK, 10000 * time.Microsecond, WB}, {SILK, 20000 * time.Microsecond, WB}, {SILK, 40000 * time.Microsecond, WB}, {SILK, 60000 * time.Microsecond, WB},
 
 	// Hybrid
-	{Hybrid, 10000, SWB}, {Hybrid, 20000, SWB},
-	{Hybrid, 10000, FB}, {Hybrid, 20000, FB},
+	{Hybrid, 10000 * time.Microsecond, SWB}, {Hybrid, 20000 * time.Microsecond, SWB},
+	{Hybrid, 10000 * time.Microsecond, FB}, {Hybrid, 20000 * time.Microsecond, FB},
 
 	// CELT
-	{CELT, 2500, NB}, {CELT, 5000, NB}, {CELT, 10000, NB}, {CELT, 20000, NB},
-	{CELT, 2500, WB}, {CELT, 5000, WB}, {CELT, 10000, WB}, {CELT, 20000, WB},
-	{CELT, 2500, SWB}, {CELT, 5000, SWB}, {CELT, 10000, SWB}, {CELT, 20000, SWB},
-	{CELT, 2500, FB}, {CELT, 5000, FB}, {CELT, 10000, FB}, {CELT, 20000, FB},
+	{CELT, 2500 * time.Microsecond, NB}, {CELT, 5000 * time.Microsecond, NB}, {CELT, 10000 * time.Microsecond, NB}, {CELT, 20000 * time.Microsecond, NB},
+	{CELT, 2500 * time.Microsecond, WB}, {CELT, 5000 * time.Microsecond, WB}, {CELT, 10000 * time.Microsecond, WB}, {CELT, 20000 * time.Microsecond, WB},
+	{CELT, 2500 * time.Microsecond, SWB}, {CELT, 5000 * time.Microsecond, SWB}, {CELT, 10000 * time.Microsecond, SWB}, {CELT, 20000 * time.Microsecond, SWB},
+	{CELT, 2500 * time.Microsecond, FB}, {CELT, 5000 * time.Microsecond, FB}, {CELT, 10000 * time.Microsecond, FB}, {CELT, 20000 * time.Microsecond, FB},
 }
