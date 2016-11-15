@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// Header represents the opus packet's TOC plus extra information depending on config
 type Header struct {
 	Config    *Config
 	NumFrames int
@@ -16,6 +17,8 @@ func (h *Header) FullDuration() time.Duration {
 	return time.Duration(h.NumFrames) * h.Config.FrameDuration
 }
 
+// DecodeHeader parses the TOC byte and more depending on config
+// will return an error is opus packet is invalid to the spec.
 func DecodeHeader(packet []byte) (header *Header, err error) {
 	if len(packet) < 1 {
 		err = errors.New("Invalid opus packet, len < 1")
@@ -66,6 +69,7 @@ const (
 	Hybrid
 )
 
+// Config represents the config bits in the TOC byte
 type Config struct {
 	Codec         Codec
 	FrameDuration time.Duration
